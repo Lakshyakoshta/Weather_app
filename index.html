@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="wrapper flex flex-col items-center m-6">
+
+        <div class="heading m-12 text-3xl">
+            <h1> WEATHER APP </h1>
+        </div>
+
+        <div class="tabs flex gap-48">
+            <div class="yourweather cursor-pointer p-1">
+                YOUR WEATHER
+            </div>
+            <div class="searchweather cursor-pointer p-1">
+                SEARCH WEATHER
+            </div>
+        </div>
+
+        <!-- search bar -->
+        <div class="searchbar flex m-10 gap-10 justify-center items-center hidden">
+            <div class="bar w-80 bg-slate-300 p-2 rounded-lg ">
+                <input class="searchcity bg-slate-300 outline-none w-full" type="text" placeholder="Search for cities....">
+            </div>
+            <!-- <div class="searchbtn">
+                <button>Search</button>
+            </div> -->
+            <div class="searchbtn cursor-pointer p-1 border-2 bg-indigo-100 drop-shadow-lg rounded-lg">
+                Search
+            </div>
+
+        </div>
+
+
+        <!-- loading screen -->
+        <div class="loading flex flex-col justify-center items-center hidden">
+            <div class="loadingimg h-80 w-80 mt-12">
+                <img class="loader" src="loading.gif" alt="">
+            </div>
+        </div>
+
+<!-- grant access -->
+        <div class="grantaccess mt-20 flex flex-col justify-center items-center gap-5 hidden">
+
+            <div class="img h-60 w-60"  >
+                <img src="location.jpeg" alt="">
+            </div>
+            <div class="head">
+                Grant Location Access
+            </div>
+            <div class="dis">
+                Allow access to get weather information
+            </div>
+            <div class="btn cursor-pointer">
+                <button class="acc-btn p-1 bg-lime-300 rounded-lg drop-shadow-xl">GRANT ACCESS</button>
+            </div>
+
+        </div>
+
+        <!-- your weater -->
+        <div class="giveweather p-5 border-2 mt-10 flex flex-col justify-center items-center gap-2">
+            <div class="placeinfo flex gap-2">
+                <div class="place">
+                    NA
+                </div>
+                <div >
+                    <img class="countryicon w-8 h-6" src="" alt="">
+                </div>
+            </div>
+            <div class="weater">
+                NA
+            </div>
+            <div >
+                <img class="weatherimg" src="" alt="">
+            </div>
+            <div class="tempdetail flex gap-2">
+                <div class="temp">
+                    NA
+                </div>
+                <div class="unit">
+                    °C
+                </div>
+
+            </div>
+
+            <div class="cards flex gap-20 bg">
+
+                <div class="card1 rounded-lg bg-lime-300 p-8 flex flex-col justify-center items-center gap-2">
+                    <div class="img h-24 w-24">
+                        <img src="windspeed.png" alt="">
+                    </div>
+                    <div class="head">
+                        Windspeed
+                    </div>
+                    <div class="windspeed">
+                        NA
+                    </div>
+                </div>
+
+                <div class="card2 rounded-lg bg-lime-300 p-8 flex flex-col justify-center items-center gap-2">
+                    <div class="img h-24 w-24">
+                        <img src="humidity.png" alt="">
+                    </div>
+                    <div class="head">
+                        Humidity
+                    </div>
+                    <div class="humidity">
+                        NA
+                    </div>
+                </div>
+
+                <div class="card3 rounded-lg bg-lime-300 p-8 flex flex-col justify-center items-center gap-2">
+                    <div class="img h-24 w-24">
+                        <img src="cloud.png" alt="">
+                    </div>
+                    <div class="head">
+                        Clouds
+                    </div>
+                    <div class="cloudi">
+                        NA
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
