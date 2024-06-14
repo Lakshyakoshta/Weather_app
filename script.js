@@ -97,7 +97,7 @@ currtab.classList.add("curr-tab");
             renderWeatherInfo(data);
 
             
-            unit.innerHTML="Kelvin";
+            // unit.innerHTML="Kelvin";
         }
         catch(err)
         {
@@ -150,7 +150,9 @@ currtab.classList.add("curr-tab");
         weatherIcon.src=`https://openweathermap.org/img/w/${data?.weather?.[0].icon}.png`;
         let t=data?.main?.temp;
         // searchtemp=t;
-        // t=t-273.15;
+        if(t>100){
+            t=t-273.15;
+        }
         temp.innerHTML=t.toFixed(2).toString() ;
         windspeed.innerHTML=data?.wind?.speed;
         humidity.innerHTML=data?.main?.humidity;
@@ -195,7 +197,7 @@ currtab.classList.add("curr-tab");
         else{
             // console.log("call else main ayi");
             fetchSearchWeatherInfo(cityname);
-            unit.innerHTML="°C";
+            // unit.innerHTML="°C";
             // temp.innerHTML=searchtemp;
             // console.log(searchtemp);
         }
